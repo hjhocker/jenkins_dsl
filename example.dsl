@@ -46,7 +46,7 @@ job('example') {
     }
     triggers {
         githubPullRequest {
-            admin([]'hjhocker', 'jenkins'])
+            admin(['hjhocker', 'jenkins'])
             orgWhitelist(['hjhocker'])
             cron('H/5 * * * *')
             triggerPhrase('Please build me')
