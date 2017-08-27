@@ -3,10 +3,6 @@ job('example') {
         githubProjectUrl('https://github.com/hjhocker/reflections_ai')
     }
 
-    authorizeProjectProperty {
-      triggeringUsersAuthorizationStrategy()
-    }
-
     publishers {
         buildDescription('example', '${BRANCH}')
     }
