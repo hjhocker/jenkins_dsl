@@ -3,7 +3,12 @@ job('example') {
         githubProjectUrl('https://github.com/hjhocker/reflections_ai')
     }
 
-      publishers {
+    authorizeProjectProperty {
+      // Run a build as a user who triggered it.
+      triggeringUsersAuthorizationStrategy()
+    }
+
+    publishers {
         buildDescription('example', '${BRANCH}')
     }
 
