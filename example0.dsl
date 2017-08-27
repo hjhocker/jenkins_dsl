@@ -1,4 +1,4 @@
-job('example') {
+job('example0') {
  properties {
         githubProjectUrl('https://github.com/hjhocker/reflections_ai')
     }
