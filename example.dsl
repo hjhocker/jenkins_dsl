@@ -12,9 +12,7 @@ job('example') {
     }
 
       steps {
-        shell('ls \n' +
-              "where are you \n" +
-              'jjjjjjjj')
+        shell('ls')
           sonarRunnerBuilder {
               project('')
               properties('sonar.projectKey=reflections_ai\n'+
@@ -49,13 +47,13 @@ job('example') {
             admin('hjhocker')
             orgWhitelist(['hjhocker'])
             cron('H/5 * * * *')
-            triggerPhrase('Please build me')
+            triggerPhrase('build me')
             extensions {
                 commitStatus {
-                    context('deploy to staging site')
-                    triggeredStatus('starting deployment to staging site...')
-                    startedStatus('deploying to staging site...')
-                    statusUrl('http://mystatussite.com/prs')
+                    context('PR Builder')
+                    triggeredStatus('Triggered the PR Builder...')
+                    startedStatus('Building the PR...')
+                    statusUrl('harrisonhocker.com')
                     completedStatus('SUCCESS', 'All is well')
                     completedStatus('FAILURE', 'Something went wrong. Investigate!')
                     completedStatus('PENDING', 'still in progress...')
