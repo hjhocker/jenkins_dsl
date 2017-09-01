@@ -1,4 +1,4 @@
-job('example') {
+job('Reflections AI PR Builder') {
  properties {
         githubProjectUrl('https://github.com/hjhocker/reflections_ai')
     }
@@ -37,7 +37,7 @@ job('example') {
             remote {
                 github('hjhocker/reflections_ai')
                 refspec('+refs/pull/*:refs/remotes/origin/pr/*')
-                credentials('id')
+                credentials('jenkins-ci-server-ssh-key')
             }
             branch('${sha1}')
         }
