@@ -37,7 +37,7 @@ job('Reflections AI PR Builder Testing') {
             remote {
                 github('hjhocker/reflections_ai')
                 refspec('+refs/pull/*:refs/remotes/origin/pr/*')
-                credentials('ubuntu')
+                credentials('e97609df-6575-4a89-bcf3-6bd2c7e41b84')
             }
             branch('${sha1}')
         }
