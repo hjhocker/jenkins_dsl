@@ -1,4 +1,4 @@
-job('Reflections AI PR Builder') {
+job('Reflections AI PR Builder Testing') {
  properties {
         githubProjectUrl('https://github.com/hjhocker/reflections_ai')
     }
