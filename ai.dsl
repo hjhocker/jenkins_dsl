@@ -50,14 +50,6 @@ job('Reflections AI PR Builder Testing') {
             triggerPhrase('build me')
             extensions {
                 commitStatus {
-                    context('PR Builder')
-                    triggeredStatus('Triggered the PR Builder...')
-                    startedStatus('Building the PR...')
-                    statusUrl('harrisonhocker.com')
-                    completedStatus('SUCCESS', 'All is well')
-                    completedStatus('FAILURE', 'Something went wrong. Investigate!')
-                    completedStatus('PENDING', 'still in progress...')
-                    completedStatus('ERROR', 'Something went really wrong. Investigate!')
                 }
             }
         }
