@@ -45,6 +45,7 @@ job('Reflections AI PR Builder Testing') {
     triggers {
         githubPullRequest {
             admin('hjhocker')
+            useGitHubHooks()
             orgWhitelist(['hjhocker'])
             cron('H/5 * * * *')
             triggerPhrase('build me')
