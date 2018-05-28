@@ -4,4 +4,4 @@ listView('PR Builders') {
   }
 };
 
-listView('Deployments');
+listView('Deployments')
