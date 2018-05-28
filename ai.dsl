@@ -1,6 +1,6 @@
 job('Reflections AI PR Builder') {
  properties {
-        githubProjectUrl('https://github.com/hjhocker/reflections_ai')
+        githubProjectUrl('https://github.com/hjhocker/test')
     }
 
     publishers {
@@ -15,11 +15,11 @@ job('Reflections AI PR Builder') {
         shell('ls')
           sonarRunnerBuilder {
               project('')
-              properties('sonar.projectKey=reflections_ai\n'+
-'sonar.projectName=reflections_ai\n'+
+              properties('sonar.projectKey=test\n'+
+'sonar.projectName=test\n'+
 'sonar.login=${sonarlogin}\n'+
-'sonar.sources=reflections_ai\n'+
-'sonar.github.repository=hjhocker/reflections_ai\n'+
+'sonar.sources=test\n'+
+'sonar.github.repository=hjhocker/test\n'+
 'sonar.github.pullRequest=${ghprbPullId}\n'+
 'sonar.projectVersion=1.0\n'+
 'sonar.github.oauth=${githuboauth}\n'+
@@ -35,7 +35,7 @@ job('Reflections AI PR Builder') {
     scm {
         git {
             remote {
-                github('hjhocker/reflections_ai')
+                github('hjhocker/test')
                 refspec('+refs/pull/*:refs/remotes/origin/pr/*')
                 credentials('jenkins-ssh-keys')
             }
