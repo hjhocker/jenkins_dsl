@@ -1,2 +1,2 @@
-listView('PR Builders')
-listView('Deployments')
+listView('PR Builders');
+listView('Deployments');
