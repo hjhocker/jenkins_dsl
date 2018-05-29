@@ -1,5 +1,6 @@
 job('Reflections AI Deploy') {
- properties {
+
+    properties {
         githubProjectUrl('https://github.com/hjhocker/test')
     }
 
@@ -7,11 +8,11 @@ job('Reflections AI Deploy') {
         buildDescription('example', '${BRANCH}')
     }
 
-      parameters {
-        stringParam('sha1', '', 'GitHub PR Sha1 Value')
+    parameters {
+        stringParam('branch', 'master', 'Branch to Build')
     }
 
-      steps {
+    steps {
         shell('ls')
     }
 
@@ -19,13 +20,14 @@ job('Reflections AI Deploy') {
         git {
             remote {
                 github('hjhocker/test')
-                refspec('+refs/pull/*:refs/remotes/origin/pr/*')
                 credentials('jenkins-ssh-keys')
             }
-            branch('${sha1}')
+            branch('*/${branch}')
         }
     }
+
     triggers {
       githubPush()
     }
+
 }
